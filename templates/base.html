@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Django blog</title>
+        {% block style %}
+        {% endblock style %}
+    </head>
+
+    <body>
+        {% comment %} here will be our header {% endcomment %}
+        {% include "header.html" %}
+
+
+        {% comment %} start of block content {% endcomment %}
+        {% block content %}
+        {% endblock content %}
+        {% comment %} end of block content {% endcomment %}
+        
+
+        {% comment %} here will be our footer {% endcomment %}
+        {% include "footer.html" %}
+
+        {% comment %} block for js {% endcomment %}
+        {% block scripts %}
+        {% endblock scripts %}
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% comment %} {% block style%}
+h2{
+    color:red;
+}
+{% endblock%} {% endcomment %}
+{% block content %}
+<h2>Blog Lists</h2>
+        {% for postes in bcposts%}
+        <h3>{{postes.title}} --{{postes.created_date}}</h3>
+        <p>{{postes.text}}</p>
+      {% endfor %}
+{% endblock %}
