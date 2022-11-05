@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
-{% comment %} {% block style%}
-h2{
-    color:red;
-}
-{% endblock%} {% endcomment %}
 {% block content %}
+<br>
 <h2>Blog Lists</h2>
-        {% for postes in bcposts%}
-        <h3>{{postes.title}} --{{postes.created_date}}</h3>
-        <p>{{postes.text}}</p>
-      {% endfor %}
+<br>
+{% for postes in bcposts%}
+<ul>
+<li><h4><a href = "{% url 'post_detail' postes.id %}">{{postes.title}}--{{postes.created_date}}</a></h4></li>
+</ul>
+{% endfor %}
 {% endblock %}

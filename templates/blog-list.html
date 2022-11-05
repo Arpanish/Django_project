@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+<h2>Blog Lists</h2>
+{% for postes in bcposts%}
+<h3>{{postes.title}} --{{postes.created_date}}</h3>
+<p>{{postes.text}}</p>
+{% endfor %}
+{% endblock %}

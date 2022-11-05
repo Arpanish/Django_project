@@ -14,3 +14,7 @@ def index(request):
 def bindex(request):
     bposts = Post.objects.all()
     return render(request,'blog/blog-list.html',{'bcposts':bposts})
+
+def post_detail(request,id):
+    posts = Post.objects.get(id = id)
+    return render(request,'blog/post-detail.html',{'post':posts})
